@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Inheritance</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <h1>Mobile Inheritance</h1>
+    <section class="options active">
+        <div class="main-options">
+            <label for="mobile-type">Select Mobile Type</label>
+            <select name="mobile-type" id="mobile-type">
+                <option value="normal-phone">Normal</option>
+                <option value="smart-phone">Smart</option>
+            </select>
+        </div>
+        <div class="smart-phone-options hide">
+            <select name="smart-phone-type" id="smart-phone-type">
+                <option value="android">Android</option>
+                <option value="windows">Windows</option>
+                <option value="ios">IOS</option>
+            </select>
+        </div>
+        <button id="go-to-device">Go</button>
+    </section>
+    <section class="normal-phone">
+        <div class="sim-type page active">
+            <label for="sim-type">Select the sim type</label>
+            <select name="sim-type" id="sim-type">
+                <option value="single-sim">Single-sim</option>
+                <option value="dual-sim">Dual-sim</option>
+            </select>
+            <button id="enter-phone-number-button">Enter phone number</button>
+        </div>
+        <div class="phone-number-section page">
+            <p class="sim-type-display"></p>
+            <label for="phone-number">Enter the Phone number</label>
+            <input type="number" name="phone-number" id="phone-number-1" placeholder="Enter the Phone number">
+            <input type="number" id="phone-number-2" class="hide" placeholder="Enter the second Sim Number">
+            <div class="contact-options">
+                <button class="small-button" id="call-option"><i class="fas fa-phone"></i></button>
+                <button class="small-button" id="message-option"><i class="fas fa-envelope"></i></button>
+            </div>
+        </div>
+        <div class="call-section page">
+            <label for="receiver-phone-number">Enter the Receiver Phone Number</label>
+            <input type="number" name="receiver-phone-number" id="receiver-phone-number"
+                placeholder="Enter the receiver number">
+            <p id="call-status"></p>
+            <button id="connect-call" class="small-button"><i class="fas fa-phone"></i></button>
+        </div>
+        <div class="message-section page">
+            <label for="message-receiver-phone-number">Enter the receiver phone number</label>
+            <input type="number" id="message-receiver-phone-number" placeholder="Enter the receiver number">
+            <label for="message-text">Enter the message</label>
+            <textarea name="message-text" id="message-text" placeholder="Enter your message here..."></textarea>
+            <p id="message-status"></p>
+            <button id="send-message" class="small-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <button class="small-button" id="normal-phone-back"><i class="fas fa-arrow-left"></i></button>
+    </section>
+    <section class="android-phone smart-type">
+        <img src="./images/download.png" alt="android-logo">
+        <div class="android-configuration page active">
+            <h3>Configure the device</h3>
+            <label for="phone-number">Enter the phone number</label>
+            <input type="number" name="phone-number" id="phone-number" placeholder="Enter the mobile number">
+            <label for="email-id">Enter the email id</label>
+            <input type="email" name="email-id" id="email-id" placeholder="Enter the email id">
+            <label for="skype-id">Enter the skype id</label>
+            <input type="text" name="skype-id" id="skype-id" placeholder="Enter the skype id">
+            <button class="configure">configure</button>
+        </div>
+        <div class="app-section page">
+            <h3>All apps</h3>
+            <button class="call small-button"><i class="fas fa-phone-alt"></i></button>
+            <button class="message small-button"><i class="fas fa-comment-dots"></i></button>
+            <button class="email small-button"><i class="fas fa-envelope"></i></button>
+            <button class="skype small-button"><i class="fab fa-skype"></i></button>
+        </div>
+        <div class="call-section page">
+            <label for="receiver-phone-number">Enter the Receiver Phone Number</label>
+            <input type="number" id="receiver-phone-number" placeholder="Enter the reciver phone number">
+            <p id="call-status"></p>
+            <button id="connect-call" class="small-button"><i class="fas fa-phone"></i></button>
+        </div>
+        <div class="message-section page">
+            <label for="message-receiver-phone-number">Enter the receiver phone number</label>
+            <input type="number" id="message-receiver-phone-number" placeholder="Enter the receiver number">
+            <label for="message-text">Enter the message</label>
+            <textarea name="message-text" id="message-text" placeholder="Enter your message here..."></textarea>
+            <p id="message-status"></p>
+            <button id="send-message" class="small-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div class="email-section page">
+            <label for="receiver-email">To:</label>
+            <input type="email" name="receiver-mail" id="receiver-email" placeholder="someone@example.com">
+            <label for="email-section">Subject:</label>
+            <input type="text" name="email-subject" id="email-subject" placeholder="Subject">
+            <label for="email-body">Body:</label>
+            <input type="text" name="email-body" id="email-body" placeholder="Body">
+            <button id="send-email">send email</button>
+            <p id="email-status"></p>
+        </div>
+        <div class="skype-section page">
+            <label for="receiver-skype-id">Receiver skype id</label>
+            <input type="text" name="receiver-skype-id" id="receiver-skype-id"
+                placeholder="Enter the receiver skype id">
+            <button id="connect-skype-voice-call">voice call</button>
+            <button id="connect-skype-video-call">video call</button>
+            <p id="skype-call-status"></p>
+        </div>
+        <button class="small-button android-back-button"><i class="fas fa-arrow-left"></i></button>
+    </section>
+    <section class="windows smart-type">
+        <img src="./images/windows.avif" alt="windows-logo" srcset="">
+        <div class="windows-configuration page active">
+            <label for="phone-number">Enter the phone number</label>
+            <input type="number" name="phone-number" id="phone-number" placeholder="Enter the phone number">
+            <label for="email-id">Enter the microsoft mail id</label>
+            <input type="email" name="email-id" id="microsoft-id" placeholder="Enter the micrsoft id">
+            <label for="duo-id">Enter the duo id</label>
+            <input type="number" name="duo-id" id="duo-id" placeholder="Enter the duo id">
+            <button class="configure">configure</button>
+        </div>
+        <div class="app-section page">
+            <h3>All apps</h3>
+            <button class="call">call</button>
+            <button class="message">message</button>
+            <button class="email">email</button>
+            <button class="duo">Duo</button>
+        </div>
+        <div class="call-section page">
+            <label for="receiver-phone-number">Enter the receiver phone number</label>
+            <input type="number" name="receiver-phone-number" id="receiver-phone-number"
+                placeholder="Enter the receiver enter-phone-number-button">
+            <p id="call-status"></p>
+            <button id="connect-call" class="small-button"><i class="fas fa-phone"></i></button>
+        </div>
+        <div class="message-section page">
+            <label for="message-receiver-phone-number">Enter the receiver phone number</label>
+            <input type="number" name="message-receiver-phone-number" id="message-receiver-phone-number"
+                placeholder="Enter the receiver number">
+            <label for="message-text">Enter the message</label>
+            <textarea name="message-text" name="message-text" id="message-text"
+                placeholder="Enter your message here..."></textarea>
+            <p id="message-status"></p>
+            <button id="send-message">send message</button>
+        </div>
+        <div class="email-section page">
+            <label for="receiver-email">To:</label>
+            <input type="email" name="receiver-mail" id="receiver-email" placeholder="someone@example.com">
+            <label for="email-section">Subject:</label>
+            <input type="text" name="email-subject" id="email-subject" placeholder="Subject">
+            <label for="email-body">Body:</label>
+            <input type="text" name="email-body" id="email-body" placeholder="Body">
+            <button id="send-email">send email</button>
+            <p id="email-status"></p>
+        </div>
+        <div class="duo-section page">
+            <label for="receiver-duo-id">Receiver Duo ID</label>
+            <input type="text" name="receiver-duo-id" id="receiver-duo-id"
+                placeholder="Enter the receiver Duo ID">
+            <button id="connect-duo-voice-call">Voice Call</button>
+            <button id="connect-duo-video-call">Video Call</button>
+            <p id="duo-call-status"></p>
+        </div>        
+        <button class="small-button windows-back-button"><i class="fas fa-times"></i></button>
+    </section>
+    <section class="ios-phone smart-type">
+        <img src="./images/ios.png" alt="ios-logo">
+        <div class="ios-configuration page active">
+            <h3>Configure the device</h3>
+            <label for="phone-number">Enter the phone number</label>
+            <input type="number" name="phone-number" id="phone-number" placeholder="Enter the mobile number">
+            <label for="email-id">Enter the email id</label>
+            <input type="email" name="email-id" id="email-id" placeholder="Enter the email id">
+            <label for="facetime-id">Enter the facetime id</label>
+            <input type="text" name="facetime-id" id="facetime-id" placeholder="Enter the facetime id">
+            <button class="configure">configure</button>
+        </div>
+        <div class="app-section page">
+            <h3>All apps</h3>
+            <button class="call">call</button>
+            <button class="message">message</button>
+            <button class="email">email</button>
+            <button class="facetime">facetime</button>
+        </div>
+        <div class="call-section page">
+            <label for="receiver-phone-number">Enter the Receiver Phone Number</label>
+            <input type="number" id="receiver-phone-number" placeholder="Enter the receiver phone number">
+            <p id="call-status"></p>
+            <button id="connect-call" class="small-button"><i class="fas fa-phone"></i></button>
+        </div>
+        <div class="message-section page">
+            <label for="message-receiver-phone-number">Enter the receiver phone number</label>
+            <input type="number" id="message-receiver-phone-number" placeholder="Enter the receiver number">
+            <label for="message-text">Enter the message</label>
+            <textarea name="message-text" id="message-text" placeholder="Enter your message here..."></textarea>
+            <p id="message-status"></p>
+            <button id="send-message" class="small-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div class="email-section page">
+            <label for="receiver-email">To:</label>
+            <input type="email" name="receiver-mail" id="receiver-email" placeholder="someone@example.com">
+            <label for="email-subject">Subject:</label>
+            <input type="text" name="email-subject" id="email-subject" placeholder="Subject">
+            <label for="email-body">Body:</label>
+            <input type="text" name="email-body" id="email-body" placeholder="Body">
+            <button id="send-email">send email</button>
+        </div>
+        <div class="facetime-section page">
+            <label for="receiver-facetime-id">Receiver facetime id</label>
+            <input type="text" name="receiver-facetime-id" id="receiver-facetime-id"
+                placeholder="Enter the receiver facetime id">
+            <button id="connect-facetime-voice-call">voice call</button>
+            <button id="connect-facetime-video-call">video call</button>
+            <p id="facetime-call-status"></p>
+        </div>
+        <button class="small-button ios-back-button"><i class="fas fa-arrow-left"></i></button>
+    </section>
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>

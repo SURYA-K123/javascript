@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating Documents</title>
+</head>
+<style>
+    button {
+        height: 30px;
+        width: 80px;
+        border: none;
+        background-color: rgb(255, 93, 93);
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .delete-btn:hover {
+        background-color: rgba(255, 93, 93, 0.821);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- <h1 id="heading">This is a heading</h1>
+        <p id="body">This is a paragraph tag</p>
+        <a href="#">This is an anchor link1 <span>hi</span></a><br>
+        <a href="#">This is an anchor link2</a> -->
+        <h1>Shopping list</h1>
+        <input type="text" id="item" placeholder="Enter the item to add">
+        <button id="add-btn">Add</button>
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        //    const link = document.querySelector("a");
+        //    console.log(link.text);
+        //    link.href = "https://developer.mozilla.org";
+
+        //    // creating a new element
+        //    const container = document.querySelector(".container");
+        //    const p = document.createElement("p");
+        //    p.textContent = "This is a javascript added paragraph";
+        //    container.appendChild(p);
+
+        //    const text = document.createTextNode("created text node using js");
+        //    const p1 = document.createElement("p");
+        //    p1.appendChild(text);
+        //    console.log(p1);
+        const list = document.querySelector("ul");
+        const button = document.querySelector("#add-btn");
+        button.addEventListener("click", () => {
+            const input = document.querySelector("#item").value;
+            if (!input) {
+                return;
+            }
+            const li = document.createElement("li");
+            const item = document.createTextNode(input);
+            const deleteButton = document.createElement("button");
+            deleteButton.setAttribute("class", "delete-btn");
+            deleteButton.addEventListener("click", () => {
+                li.remove();
+            });
+            deleteButton.textContent = "Delete";
+            li.appendChild(item);
+            li.appendChild(deleteButton);
+            list.appendChild(li);
+            input.value = null;
+        });
+    </script>
+</body>
+
+</html>

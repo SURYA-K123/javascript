@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1{
+  text-align: center;
+}
+
+section,
+.page {
+  display: none;
+}
+
+section {
+  padding: 20px;
+  margin: auto;
+  border: 10px solid #000;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.options {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section > *,
+.page > * {
+  display: block;
+  margin: 10px auto;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+select,
+button,
+input,
+textarea {
+  height: 45px;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.normal-phone {
+  height: 700px;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sim-type-display {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contact-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.small-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.small-button:hover {
+  background-color: #218838;
+}
+
+.small-button i {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+#normal-phone-back {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#normal-phone-back:hover {
+  background-color: #c82333;
+}
+
+.android-phone,
+.ios-phone {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  max-width: 350px;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.android-phone img,
+.ios-phone img {
+  height: 70px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.android-back-button,
+.ios-back-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.android-back-button:hover,
+.ios-back-button:hover {
+  background-color: #0056b3;
+}
+
+.windows {
+  width: 100%;
+  max-width: 90%;
+  height: 90vh;
+  position: relative;
+  margin: 0 auto;
+}
+
+.windows img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.windows .page {
+  width: 60%;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.windows-back-button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.windows-back-button:hover {
+  background-color: #c82333;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+input[type="file"] {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input[type="file"]:focus {
+  outline: none;
+  border: 1px solid #28a745;
+}
+
+#upload-button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#upload-button:hover {
+  background-color: #218838;
+}
+
+#file-upload-status {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+  .options,
+  .normal-phone,
+  .android-phone,
+  .ios-phone,
+  .windows {
+    width: 100%;
+    max-width: 100%;
+  }
+  .windows .page {
+    width: 90%;
+  }
+  select,
+  input,
+  textarea,
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}

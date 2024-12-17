@@ -1,0 +1,10 @@
+body {
+    background-color: var(--background-color);
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: var(--primary-color);
+  }
+  
